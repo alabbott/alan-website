@@ -16,6 +16,4 @@ My career journey has been diverse, including roles in sales, supply chain, and 
 
 I first discovered my passion for technology as a teenager, learning to code and delving into the intricacies of computer systems. As I grew older, my interests expanded to the natural environment, where I found adventure and beauty navigating wild places. Working as a backpacking guide and conservationist, I honed my ability to collaborate and work hard.
 
-Behind the bar, I not only learned to whip up fantastic margaritas, but also honed my skills in empathy and active listening.
-
 I'm always eager to take on roles that allow me to build on these skills and challenge myself. To learn more about my professional journey, feel free to check out my LinkedIn profile or reach out to me through my contact page!
