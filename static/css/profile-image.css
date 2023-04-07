@@ -1,0 +1,8 @@
+.profile-image {
+    border-radius: 20%;
+    float: right;
+    margin-left: 1em; /* Add some space between the image and the text */
+    width: 300px; /* Change the width as needed */
+    height: 300px; /* Change the height as needed */
+    object-fit: cover; /* This will crop the image while maintaining its aspect ratio */
+  }

@@ -68,7 +68,7 @@ disableHugoGeneratorInject = false
 
   # Prefix of link to the git commit detail page. GitInfo must be enabled.
   #
-  # gitUrl = ""
+  gitUrl = "https://github.com/alabbott/alan-website"
 
   # Set disableReadOtherPosts to true in order to hide the links to other posts.
   #
@@ -99,7 +99,7 @@ disableHugoGeneratorInject = false
   # Integrate Javascript files or stylesheets by adding the url to the external assets or by
   # linking local files with their path relative to the static folder, e.g. "css/styles.css"
   #
-  customCSS = []
+  customCSS = ["/css/profile-image.css"]
   customJS  = []
 
   # Toggle this option need to rebuild SCSS, requires extended version of Hugo
@@ -120,10 +120,7 @@ disableHugoGeneratorInject = false
     author = true
 
     topText = []
-    bottomText = [
-      "Powered by <a href=\"http://gohugo.io\">Hugo</a>",
-      "Made with &#10084; by <a href=\"https://github.com/rhazdon\">Djordje Atlialp</a>"
-    ]
+    bottomText = []
 
   # Colors for favicons
   #
@@ -144,6 +141,7 @@ disableHugoGeneratorInject = false
     # logoCursorAnimate  = "2s"
     # Append the current url pathname to logoText 
     logoCursorPathname = true
+    # path = "/img/logo-trans-blue.png"
 
   # Commento is more than just a comments widget you can embed — 
   # it’s a return to the roots of the internet. 
@@ -161,28 +159,28 @@ disableHugoGeneratorInject = false
   # [params.portrait]
   #   path     = "/img/cool_alan.jpeg"
   #   alt      = "Portrait"
-  #   maxWidth = "50px"
+  #   maxWidth = "300px"
 
   # Social icons
   [[params.social]]
     name = "twitter"
-    url  = "https://twitter.com/"
+    url  = "https://twitter.com/alaabbott"
 
   [[params.social]]
     name = "email"
-    url  = "mailto:nobody@example.com"
+    url  = "mailto:alan.l.abbott@gmail.com"
 
   [[params.social]]
     name = "github"
-    url  = "https://github.com/"
+    url  = "https://github.com/alabbott"
 
   [[params.social]]
     name = "linkedin"
-    url  = "https://www.linkedin.com/"
+    url  = "https://www.linkedin.com/in/alanabbott/"
 
 [languages]
   [languages.en]
-    subtitle  = "Hello Friend NG Theme"
+    subtitle  = ""
     weight    = 1
     copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
 
