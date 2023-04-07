@@ -1,4 +1,4 @@
-baseURL = ""
+baseURL = "/"
 title   = "Alan Abbott"
 languageCode = "en-us"
 theme = "hello-friend-ng"

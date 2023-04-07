@@ -2,56 +2,56 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Alan Abbott</title>
-    <link>https://alanabbott.me/</link>
+    <link>/</link>
     <description>Recent content on Alan Abbott</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Wed, 10 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://alanabbott.me/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 10 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Home Network Project</title>
-      <link>https://alanabbott.me/posts/2022/08/home-network-project/</link>
+      <link>/posts/2022/08/home-network-project/</link>
       <pubDate>Wed, 10 Aug 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://alanabbott.me/posts/2022/08/home-network-project/</guid>
+      <guid>/posts/2022/08/home-network-project/</guid>
       <description>I recently moved into a new apartment and decided I needed to upgrade my home network. I still had a router that I got in college but I knew the technology had moved forward since then. I was also frustrated by my previous roommate’s wifi situation. I had dead spots in my room that made streaming difficult and I heard about it frequently.
 We also qualify for fiber internet at the new apartment, and I could get near gigabit speeds for $55/month through RCN.</description>
     </item>
     
     <item>
       <title>New Garden!</title>
-      <link>https://alanabbott.me/posts/2022/08/new-garden/</link>
+      <link>/posts/2022/08/new-garden/</link>
       <pubDate>Wed, 10 Aug 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://alanabbott.me/posts/2022/08/new-garden/</guid>
+      <guid>/posts/2022/08/new-garden/</guid>
       <description>My fiancé and I recently moved into a place with a good sized outdoor space, at least for Chicago. I decided to use the space to plant a vegetable garden, set up a grill and lights and hang my hammock. I was pretty overwhelmed at first, I had gardened with my dad before but that was years ago and I wasn’t taking thoughtful notes about the whole process. As a result I felt like I was starting from zero but luckily I was able to put together and revise a plan pretty quickly.</description>
     </item>
     
     <item>
       <title>The system is broken</title>
-      <link>https://alanabbott.me/posts/2020/06/the-system-is-broken/</link>
+      <link>/posts/2020/06/the-system-is-broken/</link>
       <pubDate>Sun, 07 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://alanabbott.me/posts/2020/06/the-system-is-broken/</guid>
+      <guid>/posts/2020/06/the-system-is-broken/</guid>
       <description>My trust in police is gone. The system is broken. Over the past week I have seen countless videos of police brutalizing and beating people, shooting them with rubber bullets and tear gas canisters, which have both proved to be weapons capable of maiming and killing. These are not looters and rioters that are being attacked - by and large they are people who have gathered to peacefully protest and demand justice and accountability for the excessive use of force by police.</description>
     </item>
     
     <item>
       <title>I am embarrased</title>
-      <link>https://alanabbott.me/posts/2020/05/i-am-embarrased/</link>
+      <link>/posts/2020/05/i-am-embarrased/</link>
       <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://alanabbott.me/posts/2020/05/i-am-embarrased/</guid>
+      <guid>/posts/2020/05/i-am-embarrased/</guid>
       <description>I have been pulled over for taillights being out and pulled over while legally carrying a concealed firearm. My behavior and dialogue was pretty much exactly the same as this video. Philando Castile was shot and killed; I got off with a warning.
 I regularly run outside and have never been afraid of being murdered. Ahmaud Arbery was chased down and gunned down while going for a run in his own neighborhood and his killers went free for months.</description>
     </item>
     
     <item>
       <title>About Me</title>
-      <link>https://alanabbott.me/about/</link>
+      <link>/about/</link>
       <pubDate>Fri, 07 Apr 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://alanabbott.me/about/</guid>
+      <guid>/about/</guid>
       <description>Diving into the fascinating world of the Internet of Things, Augmented Reality, and Analytics, I&amp;rsquo;m passionate about making a difference in the industrial manufacturing space. My love for using technology to solve problems fuels my work. Explore my site or connect with me to learn more about my experiences and projects!
 My career journey has been diverse, including roles in sales, supply chain, and various technical positions, as well as experiences as a bartender, farmhand, conservationist, backpacking guide, and barista.</description>
     </item>
