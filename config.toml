@@ -1,4 +1,4 @@
-baseURL = "https://alanabbott.me"
+baseURL = "https://alanabbott-site.pages.dev/"
 title   = "Alan Abbott"
 languageCode = "en-us"
 theme = "hello-friend-ng"
