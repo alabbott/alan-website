@@ -8,6 +8,7 @@ type:
 - posts
 title: The system is broken
 weight: 10
+draft: true
 ---
 
 My trust in police is gone. The system is broken. Over the past week I have seen countless videos of police brutalizing and beating people, shooting them with rubber bullets and tear gas canisters, which have both proved to be weapons capable of maiming and killing. These are not looters and rioters that are being attacked - by and large they are people who have gathered to peacefully protest and demand justice and accountability for the excessive use of force by police. How do the police respond? By brutally beating and maiming the citizens who just want to be heard. I am proud to live in a country where we have a right to the freedom of speech, assembly and press. I am distraught and ashamed to see the people exercising these rights being met with violence. This system is broken.

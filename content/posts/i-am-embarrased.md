@@ -8,6 +8,7 @@ type:
 - posts
 title: I am embarrased
 weight: 10
+draft: true
 ---
 
 I have been pulled over for taillights being out and pulled over while legally carrying a concealed firearm. My behavior and dialogue was pretty much exactly the same as this video. Philando Castile was shot and killed; I got off with a warning.
