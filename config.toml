@@ -55,20 +55,20 @@ disableHugoGeneratorInject = false
 
   # Metadata mostly used in document's head
   # 
-  description = "Adventures in Outdoors, Tech, and Art with Alan"
+  description = "Alan Abbott"
   keywords = ""
   images = [""]
 
   # Home subtitle of the index page.
   #
-  homeSubtitle = "Consultant // Adventurer // Perpetual Hobbyist"
+  homeSubtitle = "Builder // Adventurer // Constantly Curious"
 
   # Set a background for the homepage
   backgroundImage = "img/background.jpeg"
 
   # Prefix of link to the git commit detail page. GitInfo must be enabled.
   #
-  gitUrl = "https://github.com/alabbott/alan-website"
+  gitUrl = "https://github.com/alabbott/alanabbott-site/commit/"
 
   # Set disableReadOtherPosts to true in order to hide the links to other posts.
   #
@@ -189,6 +189,10 @@ disableHugoGeneratorInject = false
     identifier = "about"
     name       = "About"
     url        = "about/"
+  [[menu.main]]
+    identifier = "designs"
+    name       = "Designs"
+    url        = "designs/"
   [[menu.main]]
     identifier = "posts"
     name       = "Posts"
