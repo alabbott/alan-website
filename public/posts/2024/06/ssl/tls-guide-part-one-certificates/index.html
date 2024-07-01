@@ -4,17 +4,18 @@
         <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="author" content="map[name:Alan Abbott]">
-<meta name="description" content="My fiancé and I recently moved into a place with a good sized outdoor space, at least for Chicago. I decided to use the space to plant a vegetable garden, set up a grill and lights and hang my hammock. I was pretty overwhelmed at first, I had gardened with my dad before but that was years ago and I wasn’t taking thoughtful notes about the whole process. As a result I felt like I was starting from zero but luckily I was able to put together and revise a plan pretty quickly." />
-<meta name="keywords" content="" />
+<meta name="author" content="Alan Abbott ">
+<meta name="description" content="Certificates This is where our public keys become certificates. Certificates are how clients verify servers are who they claim to be. Certificates provide this verification by including a signed message from a trusted company, known as a Certificate Authority (CA), who verifies the domain name and company information listed on the certificate is correct and true.
+A certificate is obtained from a Certificate Authority by first creating a keypair, then sending the public key along with all the information associated with the owner of the public key." />
+<meta name="keywords" content=", untagged" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
-<link rel="canonical" href="/posts/2022/08/new-garden/" />
+<link rel="canonical" href="/posts/2024/06/ssl/tls-guide-part-one-certificates/" />
 
 
     <title>
         
-            New Garden! :: Alan Abbott 
+            SSL/TLS Guide Part One: Certificates :: Alan Abbott 
         
     </title>
 
@@ -39,32 +40,35 @@
     <meta name="msapplication-TileColor" content="">
 
 
-<meta itemprop="name" content="New Garden!">
-<meta itemprop="description" content="My fiancé and I recently moved into a place with a good sized outdoor space, at least for Chicago. I decided to use the space to plant a vegetable garden, set up a grill and lights and hang my hammock. I was pretty overwhelmed at first, I had gardened with my dad before but that was years ago and I wasn’t taking thoughtful notes about the whole process. As a result I felt like I was starting from zero but luckily I was able to put together and revise a plan pretty quickly."><meta itemprop="datePublished" content="2022-08-10T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2023-04-07T02:49:47-05:00" />
-<meta itemprop="wordCount" content="1180"><meta itemprop="image" content="/"/>
-<meta itemprop="keywords" content="" />
+<meta itemprop="name" content="SSL/TLS Guide Part One: Certificates">
+<meta itemprop="description" content="Certificates This is where our public keys become certificates. Certificates are how clients verify servers are who they claim to be. Certificates provide this verification by including a signed message from a trusted company, known as a Certificate Authority (CA), who verifies the domain name and company information listed on the certificate is correct and true.
+A certificate is obtained from a Certificate Authority by first creating a keypair, then sending the public key along with all the information associated with the owner of the public key."><meta itemprop="datePublished" content="2024-06-25T18:26:14-05:00" />
+<meta itemprop="dateModified" content="2024-06-25T18:26:14-05:00" />
+<meta itemprop="wordCount" content="1025"><meta itemprop="image" content="/"/>
+<meta itemprop="keywords" content="untagged," />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="/"/>
 
-<meta name="twitter:title" content="New Garden!"/>
-<meta name="twitter:description" content="My fiancé and I recently moved into a place with a good sized outdoor space, at least for Chicago. I decided to use the space to plant a vegetable garden, set up a grill and lights and hang my hammock. I was pretty overwhelmed at first, I had gardened with my dad before but that was years ago and I wasn’t taking thoughtful notes about the whole process. As a result I felt like I was starting from zero but luckily I was able to put together and revise a plan pretty quickly."/>
+<meta name="twitter:title" content="SSL/TLS Guide Part One: Certificates"/>
+<meta name="twitter:description" content="Certificates This is where our public keys become certificates. Certificates are how clients verify servers are who they claim to be. Certificates provide this verification by including a signed message from a trusted company, known as a Certificate Authority (CA), who verifies the domain name and company information listed on the certificate is correct and true.
+A certificate is obtained from a Certificate Authority by first creating a keypair, then sending the public key along with all the information associated with the owner of the public key."/>
 
 
 
-    <meta property="og:title" content="New Garden!" />
-<meta property="og:description" content="My fiancé and I recently moved into a place with a good sized outdoor space, at least for Chicago. I decided to use the space to plant a vegetable garden, set up a grill and lights and hang my hammock. I was pretty overwhelmed at first, I had gardened with my dad before but that was years ago and I wasn’t taking thoughtful notes about the whole process. As a result I felt like I was starting from zero but luckily I was able to put together and revise a plan pretty quickly." />
+    <meta property="og:title" content="SSL/TLS Guide Part One: Certificates" />
+<meta property="og:description" content="Certificates This is where our public keys become certificates. Certificates are how clients verify servers are who they claim to be. Certificates provide this verification by including a signed message from a trusted company, known as a Certificate Authority (CA), who verifies the domain name and company information listed on the certificate is correct and true.
+A certificate is obtained from a Certificate Authority by first creating a keypair, then sending the public key along with all the information associated with the owner of the public key." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/posts/2022/08/new-garden/" /><meta property="og:image" content="/"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-08-10T00:00:00+00:00" />
-<meta property="article:modified_time" content="2023-04-07T02:49:47-05:00" />
+<meta property="og:url" content="/posts/2024/06/ssl/tls-guide-part-one-certificates/" /><meta property="og:image" content="/"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-06-25T18:26:14-05:00" />
+<meta property="article:modified_time" content="2024-06-25T18:26:14-05:00" />
 
 
 
 
 
 
-    <meta property="article:published_time" content="2022-08-10 00:00:00 &#43;0000 UTC" />
+    <meta property="article:published_time" content="2024-06-25 18:26:14 -0500 CDT" />
 
 
 
@@ -130,7 +134,7 @@
           <circle cx="12" cy="12" r="10"></circle>
           <polyline points="12 6 12 12 16 14"></polyline>
         </svg>
-        6 minutes
+        5 minutes
 
         
       </p>
@@ -138,7 +142,7 @@
 
     <article>
       <h1 class="post-title">
-        <a href="/posts/2022/08/new-garden/">New Garden!</a>
+        <a href="/posts/2024/06/ssl/tls-guide-part-one-certificates/">SSL/TLS Guide Part One: Certificates</a>
       </h1>
 
       
@@ -148,26 +152,44 @@
       
 
       <div class="post-content">
-        <p>My fiancé and I recently moved into a place with a good sized outdoor space, at least for Chicago. I decided to use the space to plant a vegetable garden, set up a grill and lights and hang my hammock. I was pretty overwhelmed at first, I had gardened with my dad before but that was years ago and I wasn’t taking thoughtful notes about the whole process. As a result I felt like I was starting from zero but luckily I was able to put together and revise a plan pretty quickly.</p>
-<h2 id="plan-a---hydroponic-dutch-buckets">Plan A - Hydroponic Dutch Buckets</h2>
-<p>Initially I wanted to try out hydroponic gardening. Essentially hydroponic gardening is growing plants without soil, using some other media to hold water and nutrients near the roots of the plants. This can help conserve space, get more nutrients to plants, and allow for growing in places or configurations that wouldn’t be possible with soil.</p>
-<p>The simplest (active) hydroponic garden, in my opinion, is a basic dutch bucket system. This consists of a 5-gallon or similar sized bucket, some means of getting water in the top, and a drain near the bottom. Ideally the drain should be 2-3 inches above the bottom of the bucket to allow some water to collect. The soil is commonly replaced with materials like perlite or coco coil. The water is treated with soluble fertilizers to create a nutrient solution. The nutrient solution and be collected and reused or drained to waste. This system is simple because it just involves getting the nutrient solution pumped into the top of the bucket and gravity to collect and reuse the nutrient solution.</p>
-<p>Note: There are actually more simple, passive hydroponic systems, but these didn’t scratch the itch of building something enough for me, I had to go more complex.</p>
-<p>After reviewing various setups, I decided several dutch buckets would be the way to go. I’d use 5-gallon buckets for the pots, PVC pipe for the drains and collection, a 55-gallon drum for the water reservoir, and a pump + host + dripper irrigation fittings to do the circulation.</p>
-<p>I was able to source the 55-gallon drum from Facebook marketplace for $10. I was surprised by how many were listed for free/cheap, they seemed easy enough to find! I found some free scrap wood on Craigslist for street pickup. Initially I planned to get the lumber new but after seeing the prices I opted for a more economical and eco-friendly solution.</p>
-<p>I found a fountain pump at Harbor Freight that met my height and flow rate needs. Pumps are typically rated for a certain height relative to the pump AT a certain flow rate. As the pump lifts water higher relative to itself, the flow rate will slow and eventually stop. Be sure that the pump you choose will give you the flow you need and the height you want.</p>
-<p>Note: Flow rate is important to consider for some systems like Nutrient Film Technique (NFT) channels, but not for others that don’t run continuously, like flood-and-drain systems.</p>
-<p>I planned to construct a short platform to set the buckets on and bury the 55-gallon drum deep enough to allow the solution to drain back into the reservoir. However, I never made it to construction because I was confronted by Plan B.</p>
-<h2 id="plan-b---just-use-the-dirt">Plan B - Just use the dirt</h2>
-<p>After explaining all the benefits of hydroponic gardens and why I wanted to try it, my fiancé made the fair point that it’s rare to have a patch of dirt in Chicago, so why cover the dirt with plastic buckets. This was ultimately the way we decided to go. The point that swayed me was she said she would spend more time outside with me if there was a nice garden. So, dirt garden it was.</p>
-<p>I realize I don’t know much about gardening, so I venture to the local library. I haven’t been in a library in so long, it felt nice to feel like a kid in a candy store with books again. I find a few books on local plants and gardening and get checked out. After getting home and reviewing the gardening books. I decided to try and identify what plants I had in the garden and what condition the soil was in.</p>
-<p>I used the app iNaturalist to take photos of the plants in the garden and it suggested classifications for them. It was helpful when other locals would comment and confirm or refine one of the AI’s suggestions. I used a few soil tests from the books to assess the dirt. I would grab a fistful of dirt and squeeze and judge it based on how it crumbled as I let go.</p>
-<p>After some consideration I decided that mostly the garden was full of weeds and local grasses and the dirt was in okay, but not great condition. I decided I needed to weed the garden and turn the dirt over to get ready for any new plants. This is where the fun and hard work began. I cleared the top layer of dirt and weeds, along with lots of trash and rocks from previous tenants. I also loosened the dirt to get ready for additional soil.</p>
-<p>I thought the soil needed more sand, since it seemed to cling together a little too well. I decided to go with some of the cheapest stuff from Lowe’s that still had any nutrient content. I got 10 bags, hopefully enough to add a couple inches across the area I wanted to plant. I got the bags of dirt home and worked them into the existing soil. This was by far the hardest work but also the most enjoyable.</p>
-<p>Once I had got the garden ready, we made a trip to a local nursery to get some plants for the space. We went to the Urhausen Greenhouses and found all the plants we could want. We got several varieties of peppers and tomatoes, as well as some cucumber and watermelon, and some Salvia and Marigold flowers. I planted them when we got home, gave everything a good water and have hoped for the best!</p>
-<h3 id="plan-b---a-bonus-nft-system">Plan B+ - A bonus NFT system</h3>
-<p>I also had all this free wood and PVC so I decided to construct a four channel NFT setup in the back of the dirt patch. This area doesn’t get a ton of sun anyway so it seemed like a decent gamble on the space. I used the wood to build A-frame supports for the PVC channels and screwed them in place. I buried the 55-gallon drum to be the reservoir and the channels will drain back into the drum. It’s a simple enough setup and hopefully will grow several small plants.</p>
-<p>Overall it seems to be growing well and it has made the back space a much more enjoyable place to hang out! We’ve eaten several meals out here and I’ve started hammocking over the plants. I also enjoy fast wi-fi while doing this because of my overkill home network setup, which I will write about soon.</p>
+        <h2 id="certificates">Certificates</h2>
+<p>This is where our public keys become certificates. Certificates are how clients verify servers are who they claim to be. Certificates provide this verification by including a signed message from a trusted company, known as a Certificate Authority (CA), who verifies the domain name and company information listed on the certificate is correct and true.</p>
+<p>A certificate is obtained from a Certificate Authority by first creating a keypair, then sending the public key along with all the information associated with the owner of the public key. The combination of public key and identifying information is called a Certificate Signing Request (CSR) and is the file (.csr) sent to the CA to request a certificate. The signed certificate is then sent back, which includes the public key and identifying information of the requestor, but also the signature of the CA verifying the validity of the information.</p>
+<p>Common Name and SAN Name</p>
+<p>One of the fields for information is the Common Name (CN) which refers to the fully qualified domain name (FQDN) for the server. The FQDN simply refers to the complete URL without any protocol or port information. For example: <a href="http://rockwellautomation.com/">rockwellautomation.com</a>, <a href="http://mail.google.com/">mail.google.com</a>, or ftis-twx9. It is important to match the FQDN to the address you will use to reach the server, as the browser will use this to verify the certificate is valid.</p>
+<p>If a server needs to be reached from multiple addresses a Subject Alternate Name (SAN) can be specified which provides alternate names from which the server can reached.</p>
+<p>The other information fields should be completed if sending a CSR to a CA but otherwise don&rsquo;t matter.</p>
+<p>Types of Certificates
+There are three types of certificates to be aware of:</p>
+<p>Root Certificate
+This is used by the CA to sign either intermediate or end entity certificates.
+Typically have very long expiration dates
+These are what make up the Trusted Root Certificate Authorities</p>
+<p>Intermediate Certificate
+This is a certificate that has been signed by a root certificate, but may be used to sign more certificates
+Can sign either end entity certificates or other intermediate certificates
+Shorter expiration dates and rotated more often</p>
+<p>End Entity Certificate
+These are certificates assigned to individual servers
+They can not be used to sign more certificates</p>
+<p>It&rsquo;s good to know that individual certificates can also have restrictions placed on what they can be used for when they are created, which can sometimes cause headaches.</p>
+<p>Certificate Chains</p>
+<p>A certificate chain is a series of certificates that originate from a trusted root certificate and extend through any number of intermediate certificates, ultimately leading to the end entity certificate. The purpose of a certificate chain is to establish a chain of trust from the end entity certificate back to the root certificate, verifying the identity and authenticity of the server or client involved in the communication.</p>
+<p>The process of validating a certificate chain involves verifying the digital signatures of each certificate in the chain, starting with the end entity certificate and moving up the chain towards the root certificate. Each certificate in the chain is signed by the issuing authority of the next certificate in the chain. The chain is considered valid if the root certificate is found in the client&rsquo;s trusted root certificate store.</p>
+<p>In summary, a certificate chain consists of:</p>
+<p>End Entity Certificate - assigned to the server or client that needs to be authenticated.
+Intermediate Certificates (if any) - signed by the root or another intermediate certificate and used to sign end entity certificates.
+Root Certificate - the top-level certificate, trusted by clients and used to sign intermediate certificates.</p>
+<p>Certificate Bundles</p>
+<p>A certificate bundle is a collection of multiple certificates combined into a single file. Bundles are used to simplify certificate management and distribution, particularly when dealing with certificate chains or multiple certificates for different domains or services. Bundles can be provided in various file formats, such as .pem, .pfx, or .crt, depending on the platform and application requirements.</p>
+<p>Expiration Dates</p>
+<p>Both CA signed and self-signed certificates have an expiration date, requiring companies to confirm they still control the domain name and private key associated with the certificate every so often. In production it is good practice to set expiration dates conservatively and rotate certificates often. In a demo environment, I usually set them for as long as I expect the demo to live. If a company loses control of a production private key, they should get new certificates immediately, as they could be impersonated by anyone with the private key.</p>
+<p>Expiration dates are one major cause of certificate errors in demos. You can save hassle later on by creating demo certificates with long expiration dates. We will discuss replacing expired certificates later on in this guide. The other major cause of security warnings is using self-signed certificates. Or really, not configuring demos to trust our generated self-signed certificates.</p>
+<p>Self-Signed Certificates</p>
+<p>A self-signed certificate is represented by one of the above scenarios, where we must accept Person A&rsquo;s identity because they say so. A self-signed certificate provides a public key without a signed message verifying the identity of the key holder. Browsers by default show an error and don&rsquo;t visit sites with self-signed certificates, for good reason, I don&rsquo;t want anyone claiming to be my bank without signed verification.</p>
+<p>To bypass this, we can add our self-signed certificate to the Trusted Root Certificate Authorities. Most operating systems have a default group of Trusted Root Certificate Authorities. Java has a separate group of default trusted CAs, known as cacerts. By adding our self-signed certificate to the Trusted Root CAs group, browsers will recognize our self-signed certificate and will not show errors, provided our certificate isn&rsquo;t expired and matches the FQDN used to reach the server.</p>
+<p>Self-Signed Certificate Authority</p>
+<p>If you need to generate certificates for several servers, you can create a self-signed Certificate Authority, which can then be used to sign multiple certificates for all of the servers, while only requiring the self-signed CA to be added to the Trusted Root Certificate Authorities. The FactoryTalk Analytics DataView 3.03 includes scripts for generating a self-signed CA and certificates for servers. The scripts require OpenSSL for Windows which can be downloaded below:</p>
 
       </div>
     </article>
@@ -176,6 +198,13 @@
 
     <div class="post-info">
       
+    <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg>
+
+        <span class="tag"><a href="/tags/untagged/">untagged</a></span>
+        
+    </p>
+
       
 
       <p>
@@ -186,7 +215,7 @@
           <line x1="16" y1="17" x2="8" y2="17"></line>
           <polyline points="10 9 9 9 8 9"></polyline>
         </svg>
-        1180 Words
+        1025 Words
       </p>
 
       <p>
@@ -197,32 +226,18 @@
           <line x1="3" y1="10" x2="21" y2="10"></line>
         </svg>
         
-          2022-08-09 19:00
+          2024-06-25 18:26
         
 
          
           
-            
-              (Last updated: 2023-04-07 02:49)
-            
-          
         
       </p>
-        <p>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-commit">
-            <circle cx="12" cy="12" r="4"></circle>
-            <line x1="1.05" y1="12" x2="7" y2="12"></line>
-            <line x1="17.01" y1="12" x2="22.96" y2="12"></line>
-          </svg>
-
-          <a href="https://github.com/alabbott/alanabbott-site/commit/9b641c927b024896aa0362e88c0c9c3f79e86391" target="_blank" rel="noopener">9b641c9</a>
-          @ 2023-04-07
-        </p>
     </div>
       <hr />
       <div class="sharing-buttons">
         
-<a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u=%2fposts%2f2022%2f08%2fnew-garden%2f" target="_blank" rel="noopener" aria-label="" title="Share on facebook">
+<a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u=%2fposts%2f2024%2f06%2fssl%2ftls-guide-part-one-certificates%2f" target="_blank" rel="noopener" aria-label="" title="Share on facebook">
   <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
     </div>
@@ -230,7 +245,7 @@
 </a>
 
 
-<a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?url=%2fposts%2f2022%2f08%2fnew-garden%2f" target="_blank" rel="noopener" aria-label="" title="Share on twitter">
+<a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?url=%2fposts%2f2024%2f06%2fssl%2ftls-guide-part-one-certificates%2f" target="_blank" rel="noopener" aria-label="" title="Share on twitter">
   <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small">
       <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
@@ -239,7 +254,7 @@
 </a>
 
 
-<a class="resp-sharing-button__link" href="https://www.tumblr.com/widgets/share/tool?posttype=link&amp;title=New%20Garden%21&amp;caption=New%20Garden%21&amp;canonicalUrl=%2fposts%2f2022%2f08%2fnew-garden%2f" target="_blank" rel="noopener" aria-label="" title="Share on tumblr">
+<a class="resp-sharing-button__link" href="https://www.tumblr.com/widgets/share/tool?posttype=link&amp;title=SSL%2fTLS%20Guide%20Part%20One%3a%20Certificates&amp;caption=SSL%2fTLS%20Guide%20Part%20One%3a%20Certificates&amp;canonicalUrl=%2fposts%2f2024%2f06%2fssl%2ftls-guide-part-one-certificates%2f" target="_blank" rel="noopener" aria-label="" title="Share on tumblr">
   <div class="resp-sharing-button resp-sharing-button--tumblr resp-sharing-button--small">
     <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.563 24c-5.093 0-7.031-3.756-7.031-6.411V9.747H5.116V6.648c3.63-1.313 4.512-4.596 4.71-6.469C9.84.051 9.941 0 9.999 0h3.517v6.114h4.801v3.633h-4.82v7.47c.016 1.001.375 2.371 2.207 2.371h.09c.631-.02 1.486-.205 1.936-.419l1.156 3.425c-.436.636-2.4 1.374-4.156 1.404h-.178l.011.002z"/></svg>
@@ -248,7 +263,7 @@
 </a>
 
 
-<a class="resp-sharing-button__link" href="mailto:?subject=New%20Garden%21&amp;body=%2fposts%2f2022%2f08%2fnew-garden%2f" target="_self" rel="noopener" aria-label="" title="Share via email">
+<a class="resp-sharing-button__link" href="mailto:?subject=SSL%2fTLS%20Guide%20Part%20One%3a%20Certificates&amp;body=%2fposts%2f2024%2f06%2fssl%2ftls-guide-part-one-certificates%2f" target="_self" rel="noopener" aria-label="" title="Share via email">
   <div class="resp-sharing-button resp-sharing-button--email resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
     </div>
@@ -256,7 +271,7 @@
 </a>
 
 
-<a class="resp-sharing-button__link" href="https://pinterest.com/pin/create/button/?url=%2fposts%2f2022%2f08%2fnew-garden%2f&amp;media=%2fposts%2f2022%2f08%2fnew-garden%2f;description=New%20Garden%21" target="_blank" rel="noopener" aria-label="" title="Share on pinterest">
+<a class="resp-sharing-button__link" href="https://pinterest.com/pin/create/button/?url=%2fposts%2f2024%2f06%2fssl%2ftls-guide-part-one-certificates%2f&amp;media=%2fposts%2f2024%2f06%2fssl%2ftls-guide-part-one-certificates%2f;description=SSL%2fTLS%20Guide%20Part%20One%3a%20Certificates" target="_blank" rel="noopener" aria-label="" title="Share on pinterest">
   <div class="resp-sharing-button resp-sharing-button--pinterest resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/></svg>
     </div>
@@ -264,7 +279,7 @@
 </a>
 
 
-<a class="resp-sharing-button__link" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fposts%2f2022%2f08%2fnew-garden%2f&amp;title=New%20Garden%21&amp;summary=New%20Garden%21&amp;source=%2fposts%2f2022%2f08%2fnew-garden%2f" target="_blank" rel="noopener" aria-label="" title="Share on linkedin">
+<a class="resp-sharing-button__link" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fposts%2f2024%2f06%2fssl%2ftls-guide-part-one-certificates%2f&amp;title=SSL%2fTLS%20Guide%20Part%20One%3a%20Certificates&amp;summary=SSL%2fTLS%20Guide%20Part%20One%3a%20Certificates&amp;source=%2fposts%2f2024%2f06%2fssl%2ftls-guide-part-one-certificates%2f" target="_blank" rel="noopener" aria-label="" title="Share on linkedin">
   <div class="resp-sharing-button resp-sharing-button--linkedin resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
     </div>
@@ -272,7 +287,7 @@
 </a>
 
 
-<a class="resp-sharing-button__link" href="https://reddit.com/submit/?url=%2fposts%2f2022%2f08%2fnew-garden%2f&amp;resubmit=true&amp;title=New%20Garden%21" target="_blank" rel="noopener" aria-label="" title="Share on reddit">
+<a class="resp-sharing-button__link" href="https://reddit.com/submit/?url=%2fposts%2f2024%2f06%2fssl%2ftls-guide-part-one-certificates%2f&amp;resubmit=true&amp;title=SSL%2fTLS%20Guide%20Part%20One%3a%20Certificates" target="_blank" rel="noopener" aria-label="" title="Share on reddit">
   <div class="resp-sharing-button resp-sharing-button--reddit resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg>
     </div>
@@ -280,7 +295,7 @@
 </a>
 
 
-<a class="resp-sharing-button__link" href="https://www.xing.com/app/user?op=share;url=%2fposts%2f2022%2f08%2fnew-garden%2f;title=New%20Garden%21" target="_blank" rel="noopener" aria-label="" title="Share on xing">
+<a class="resp-sharing-button__link" href="https://www.xing.com/app/user?op=share;url=%2fposts%2f2024%2f06%2fssl%2ftls-guide-part-one-certificates%2f;title=SSL%2fTLS%20Guide%20Part%20One%3a%20Certificates" target="_blank" rel="noopener" aria-label="" title="Share on xing">
   <div class="resp-sharing-button resp-sharing-button--xing resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M18.188 0c-.517 0-.741.325-.927.66 0 0-7.455 13.224-7.702 13.657.015.024 4.919 9.023 4.919 9.023.17.308.436.66.967.66h3.454c.211 0 .375-.078.463-.22.089-.151.089-.346-.009-.536l-4.879-8.916c-.004-.006-.004-.016 0-.022L22.139.756c.095-.191.097-.387.006-.535C22.056.078 21.894 0 21.686 0h-3.498zM3.648 4.74c-.211 0-.385.074-.473.216-.09.149-.078.339.02.531l2.34 4.05c.004.01.004.016 0 .021L1.86 16.051c-.099.188-.093.381 0 .529.085.142.239.234.45.234h3.461c.518 0 .766-.348.945-.667l3.734-6.609-2.378-4.155c-.172-.315-.434-.659-.962-.659H3.648v.016z"/></svg>
     </div>
@@ -288,7 +303,7 @@
 </a>
 
 
-<a class="resp-sharing-button__link" href="whatsapp://send?text=New%20Garden%21%20%2fposts%2f2022%2f08%2fnew-garden%2f" target="_blank" rel="noopener" aria-label="" title="Share on whatsapp">
+<a class="resp-sharing-button__link" href="whatsapp://send?text=SSL%2fTLS%20Guide%20Part%20One%3a%20Certificates%20%2fposts%2f2024%2f06%2fssl%2ftls-guide-part-one-certificates%2f" target="_blank" rel="noopener" aria-label="" title="Share on whatsapp">
   <div class="resp-sharing-button resp-sharing-button--whatsapp resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
     </div>
@@ -296,7 +311,7 @@
 </a>
 
 
-<a class="resp-sharing-button__link" href="https://news.ycombinator.com/submitlink?u=%2fposts%2f2022%2f08%2fnew-garden%2f&amp;t=New%20Garden%21" target="_blank" rel="noopener" aria-label="" title="Share on hacker news">
+<a class="resp-sharing-button__link" href="https://news.ycombinator.com/submitlink?u=%2fposts%2f2024%2f06%2fssl%2ftls-guide-part-one-certificates%2f&amp;t=SSL%2fTLS%20Guide%20Part%20One%3a%20Certificates" target="_blank" rel="noopener" aria-label="" title="Share on hacker news">
   <div class="resp-sharing-button resp-sharing-button--hackernews resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
 			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M0 24V0h24v24H0zM6.951 5.896l4.112 7.708v5.064h1.583v-4.972l4.148-7.799h-1.749l-2.457 4.875c-.372.745-.688 1.434-.688 1.434s-.297-.708-.651-1.434L8.831 5.896h-1.88z"/></svg>
     </div>
@@ -304,7 +319,7 @@
 </a>
 
 
-<a class="resp-sharing-button__link" href="https://telegram.me/share/url?text=New%20Garden%21&amp;url=%2fposts%2f2022%2f08%2fnew-garden%2f" target="_blank" rel="noopener" aria-label="" title="Share on telegram">
+<a class="resp-sharing-button__link" href="https://telegram.me/share/url?text=SSL%2fTLS%20Guide%20Part%20One%3a%20Certificates&amp;url=%2fposts%2f2024%2f06%2fssl%2ftls-guide-part-one-certificates%2f" target="_blank" rel="noopener" aria-label="" title="Share on telegram">
   <div class="resp-sharing-button resp-sharing-button--telegram resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
     </div>
@@ -320,20 +335,13 @@
         <div class="pagination__buttons">
             
             <span class="button previous">
-                <a href="/posts/2022/08/home-network-project/">
+                <a href="/posts/2024/06/ssl/tls-guide-part-one-public/private-keys/">
                     <span class="button__icon">←</span>
-                    <span class="button__text">Home Network Project</span>
+                    <span class="button__text">SSL/TLS Guide Part One: Public/Private Keys</span>
                 </a>
             </span>
             
 
-            
-            <span class="button next">
-                <a href="/posts/2024/06/ssl/tls-guide-part-three-tools-for-working-with-certificates/">
-                    <span class="button__text">SSL/TLS Guide Part Three: Tools for Working with Certificates</span>
-                    <span class="button__icon">→</span>
-                </a>
-            </span>
             
         </div>
     </div>

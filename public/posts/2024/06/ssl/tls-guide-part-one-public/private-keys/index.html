@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="Alan Abbott ">
+<meta name="description" content="Transport Layer Security (TLS) or Secure Sockets Layer (SSL) protocols are the primary method for securing communications between servers and clients on the internet or other networks such as a plant floor or enterprise network. TLS is the successor to SSL, however the terms are used interchangeably, both referring to the newer TLS protocol. Without using TLS to encrypt the communication between servers and clients, their communications could be exposed to 3rd parties intercepting and possibly spoofing messages." />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="/posts/2024/06/ssl/tls-guide-part-one-public/private-keys/" />
+
+
+    <title>
+        
+            SSL/TLS Guide Part One: Public/Private Keys :: Alan Abbott 
+        
+    </title>
+
+
+
+
+
+<link rel="stylesheet" href="/main.d05b4f564ff2cfdd84b2463b1e642b02e7b6a2c26dab5970b34ed807ba8e1090.css" integrity="sha256-0FtPVk/yz92EskY7HmQrAue2osJtq1lws07YB7qOEJA=">
+
+
+    
+        <link rel="stylesheet" type="text/css" href="/css/profile-image.css">
+    
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="msapplication-TileColor" content="">
+
+
+<meta itemprop="name" content="SSL/TLS Guide Part One: Public/Private Keys">
+<meta itemprop="description" content="Transport Layer Security (TLS) or Secure Sockets Layer (SSL) protocols are the primary method for securing communications between servers and clients on the internet or other networks such as a plant floor or enterprise network. TLS is the successor to SSL, however the terms are used interchangeably, both referring to the newer TLS protocol. Without using TLS to encrypt the communication between servers and clients, their communications could be exposed to 3rd parties intercepting and possibly spoofing messages."><meta itemprop="datePublished" content="2024-06-25T18:26:20-05:00" />
+<meta itemprop="dateModified" content="2024-06-25T18:26:20-05:00" />
+<meta itemprop="wordCount" content="1429"><meta itemprop="image" content="/"/>
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="/"/>
+
+<meta name="twitter:title" content="SSL/TLS Guide Part One: Public/Private Keys"/>
+<meta name="twitter:description" content="Transport Layer Security (TLS) or Secure Sockets Layer (SSL) protocols are the primary method for securing communications between servers and clients on the internet or other networks such as a plant floor or enterprise network. TLS is the successor to SSL, however the terms are used interchangeably, both referring to the newer TLS protocol. Without using TLS to encrypt the communication between servers and clients, their communications could be exposed to 3rd parties intercepting and possibly spoofing messages."/>
+
+
+
+    <meta property="og:title" content="SSL/TLS Guide Part One: Public/Private Keys" />
+<meta property="og:description" content="Transport Layer Security (TLS) or Secure Sockets Layer (SSL) protocols are the primary method for securing communications between servers and clients on the internet or other networks such as a plant floor or enterprise network. TLS is the successor to SSL, however the terms are used interchangeably, both referring to the newer TLS protocol. Without using TLS to encrypt the communication between servers and clients, their communications could be exposed to 3rd parties intercepting and possibly spoofing messages." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/2024/06/ssl/tls-guide-part-one-public/private-keys/" /><meta property="og:image" content="/"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-06-25T18:26:20-05:00" />
+<meta property="article:modified_time" content="2024-06-25T18:26:20-05:00" />
+
+
+
+
+
+
+    <meta property="article:published_time" content="2024-06-25 18:26:20 -0500 CDT" />
+
+
+
+
+
+
+
+
+
+
+
+    </head>
+
+    
+        <body>
+    
+    
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">&gt;</span>
+            <span class="logo__text logo__pathname">
+                $ cd /home/</span>
+            <span class="logo__cursor" style=
+                  "
+                   background-color:#71C6F2;
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="/about/">About</a></li><li><a href="/designs/">Designs</a></li><li><a href="/posts/">Posts</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+  <main class="post">
+
+    <div class="post-info">
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        7 minutes
+
+        
+      </p>
+    </div>
+
+    <article>
+      <h1 class="post-title">
+        <a href="/posts/2024/06/ssl/tls-guide-part-one-public/private-keys/">SSL/TLS Guide Part One: Public/Private Keys</a>
+      </h1>
+
+      
+
+      
+
+      
+
+      <div class="post-content">
+        <p>Transport Layer Security (TLS) or Secure Sockets Layer (SSL) protocols are the primary method for securing communications between servers and clients on the internet or other networks such as a plant floor or enterprise network. TLS is the successor to SSL, however the terms are used interchangeably, both referring to the newer TLS protocol. Without using TLS to encrypt the communication between servers and clients, their communications could be exposed to 3rd parties intercepting and possibly spoofing messages. With cyber-attacks on industrial manufacturers increasing, securing all production and development networks becomes increasingly important everyone from Controls Engineers and Developers to CEOs and CISOs.</p>
+<p>Managing TLS and certificates can be a huge pain as well, especially in environments that can go long stretches between use and be shared by many users. We&rsquo;re probably all too familiar with the security warnings about certificate errors, either showing as insecure or worse, not loading at all.</p>
+<p>In this guide, I will break down the pieces that come together to form the TLS protocol and go over some tips for working with certificates. Understanding the basics helps make sense of errors and makes the whole ordeal a little less daunting.</p>
+<h3 id="contents">Contents</h3>
+<ol>
+<li><a href="/posts/2024/06/ssl/tls-guide-part-one-public/private-keys/"><strong>Part One: Public/Private Keys</strong></a></li>
+<li><a href="/posts/2024/06/ssl/tls-guide-part-two-certificates/">Part Two: Certificates</a></li>
+<li><a href="/posts/2024/06/ssl/tls-guide-part-three-tools-for-working-with-certificates/">Part Three: Tools for Working with Certificates</a></li>
+</ol>
+<h2 id="a-precursor-identity-privacy-trust-and-security">A precursor: Identity, Privacy, Trust, and Security</h2>
+<p>If two people want to send messages to each other they can pass notes using a messenger. This would not be very private however, because the messenger could easily read a message before delivering it. It would also not be very secure because the messenger could alter the message before delivery. There is no way to ensure or trust that the message is really from the sender or that it hasn&rsquo;t been changed. The identity of the sender can&rsquo;t be verified by the recipient.</p>
+<p>The two people could implement a code, where they shift A to B, C to D, and so on. However, this would require them to agree upon this code via an outside channel. It would not be possible to establish trusted communication without meeting in person, or using an existing outside channel.  This is sometimes referred to as a shared secret.</p>
+<p>If two people need to exchange information securely without meeting previously, such as webservers and a new client, they can use public and private keys to accomplish this. The use of public and private keys has many advantages, such as private communication without a shared secret, as well as verifying identity and providing trust through things like signatures and certificate chains.</p>
+<p>It helped me to understand the various pieces of TLS certificates when I broke out the ideas of privacy, identity, and trust.</p>
+<ul>
+<li>Privacy - Communication between parties can&rsquo;t be read by outside listeners</li>
+<li>Identity - Can you verify who sent you that message and that it wasn&rsquo;t modified?</li>
+<li>Trust - Can I verify that you are who you say you are?</li>
+</ul>
+<p>In my mind, these are the core concepts behind &ldquo;secure&rdquo; communication. When we say we have a secure connection to a server or device, we mean we can verify the identity of the sender, the integrity of the message, and not worry that 3rd parties can read what we&rsquo;re sending. Hopefully by the end of this guide you will feel comfortable with the way TLS certificates provide privacy, identity, and trust which will make using them, and fixing them, much easier.</p>
+<h2 id="public-keys-and-private-keys">Public Keys and Private Keys</h2>
+<p>The most important concept in the TLS protocol is public keys and private keys, which make up <strong>public key infrastructure (PKI)</strong>. In reality these keys are just very, very large numbers used in cryptography algorithms, stored in certain specific formats. These keys enable everything in TLS with two functions.</p>
+<h3 id="two-important-functions">Two important functions:</h3>
+<ul>
+<li>Messages encrypted with the <em>public key</em> can only be decrypted with the <em>private key</em></li>
+<li>Messages encrypted with the <em>private key</em> can only be decrypted with the <em>public key</em></li>
+</ul>
+<p>If <em>Person A</em> wants to send a message to <em>Person B</em>, they would each generate a keypair (public and private key) and exchange <strong>public keys</strong>, keeping their <strong>private keys</strong> secret. It doesn&rsquo;t matter if the public keys are intercepted, as they are public information and only represent the identity of the private key holder.</p>
+<h4 id="the-process-for-conversation-would-be-as-follows">The process for conversation would be as follows:</h4>
+<ol>
+<li>
+<p>For <em>Person A</em> to send a message to <em>Person B</em>, they would use <em>Person B</em>&rsquo;s <strong>public key</strong> to encrypt the message</p>
+</li>
+<li>
+<p><em>Person B</em> would use their secret <strong>private key</strong> to decrypt the message, only readable to them</p>
+</li>
+</ol>
+<h4 id="to-respond">To respond:</h4>
+<ol>
+<li>
+<p>When <em>Person B</em> sends a message to <em>Person A</em>, they would use <em>Person A</em>&rsquo;s <strong>public key</strong> to encrypt the message</p>
+</li>
+<li>
+<p><em>Person A</em> would use their secret <strong>private key</strong> to decrypt the message, only readable to them</p>
+</li>
+</ol>
+<p>This system is great for ensuring privacy, as only the intended recipient can decrypt and read the message. It is not, however, a great system for verifying identity and providing trust. We must talk about signing and verification to understand the other side of public key infrastructure.</p>
+<p>Remember, private keys can also encrypt messages that can only be decrypted by the public key, and the public key is widely available and tied to the key holder&rsquo;s identity. To verify their identity, the private key holder can use their secret key to encrypt a message, only decryptable by their public key. This process is known as signing the message.</p>
+<p>When the recipient gets that message, they will use the sender&rsquo;s public key to confirm they are the one who encrypted it, in a process called verification. Because the public key is tied to the identity of the private key holder, the recipient can be certain the message is from the sender and hasn&rsquo;t been changed in transit.</p>
+<h4 id="the-process-for-signing-a-message-would-be-as-follows">The process for signing a message would be as follows:</h4>
+<ol>
+<li>
+<p><em>Person A</em> uses their <strong>private key</strong> to encrypt a message, and sends it to <em>Person B</em></p>
+</li>
+<li>
+<p><em>Person B</em> uses <em>Person A</em>&rsquo;s <strong>public key</strong> to decrypt the message, confirming it is from <em>Person A</em></p>
+</li>
+</ol>
+<h4 id="the-process-for-verifying-a-message">The process for verifying a message:</h4>
+<ol>
+<li>
+<p><em>Person B</em> receives an encrypted message from <em>Person A</em>, who claims to have signed it using their <strong>private key</strong></p>
+</li>
+<li>
+<p><em>Person B</em> successfully decrypts the message using <em>Person A</em>&rsquo;s <strong>public key</strong>, confirming it was sent by <em>Person A</em></p>
+</li>
+</ol>
+<p>This system may seem to check all of our boxes, allowing for two-way, private communication where the identity and integrity of each message can be verified. However, we are required to trust that Person A and Person B are who they claim to be. How can we be sure it is indeed Person A and Person B who hold those private keys? If we had a signed message from someone we trusted, we could verify that Person A&rsquo;s public key (and private key) belong to them.</p>
+<h3 id="cryptography-nerd-moment">Cryptography Nerd Moment</h3>
+<p>The above system roughly represents PGP (Pretty Good Privacy) which has been around for over 30 years and is pretty much the standard for encrypting or verifying communications. Beyond just messaging, PGP can be used to sign and verify blocks of code or even entire pieces of software. A developer can sign a package, and provide the signature. Using their public key and cryptography software, you can verify that the program is not corrupted, either accidentally or maliciously.</p>
+<p>A limit of PGP is that it relies on a &ldquo;web of trust&rdquo; where individuals will endorse each other&rsquo;s public keys, confirming they belong to the claimed owner. While this decentralized model may work well in some situations, a system was needed for a more streamlined method of trust management, leading to X.509 certificates, which are described in the <a href="/posts/2024/06/ssl/tls-guide-part-two-certificates/">Part Two</a> of this guide.</p>
+<p>There are several algorithms that can be used to generate the key pairs, such as RSA or IDEA, but they all use incredibly large numbers and mathematical processes that would be practically impossible to undo using modern computers. A description of the math behind creating keys can be found here: <a href="https://en.wikipedia.org/wiki/RSA_(cryptosystem)">RSA (cryptosystem) - Wikipedia</a></p>
+<p>There is the possibility that quantum computers could very quickly break the encryption used in PGP and TLS communication. This would mean that virtually all information encrypted in the last 30 years could be decrypted and read. It&rsquo;s speculated that some people may collect encrypted information with the hope of decrypting it in the future using quantum algorithms. In light of this, work is being spent developing new cryptography algorithms, that rely on different principles and would make them resistant to future decryption using quantum computing.</p>
+<p>Continue reading <a href="/posts/2024/06/ssl/tls-guide-part-two-certificates/">Part Two</a> to learn about how X.509 certificates enable TLS communication and keep the modern internet secure.</p>
+
+      </div>
+    </article>
+
+    <hr />
+
+    <div class="post-info">
+      
+      
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <polyline points="10 9 9 9 8 9"></polyline>
+        </svg>
+        1429 Words
+      </p>
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        
+          2024-06-25 18:26
+        
+
+         
+          
+        
+      </p>
+    </div>
+      <hr />
+      <div class="sharing-buttons">
+        
+<a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u=%2fposts%2f2024%2f06%2fssl%2ftls-guide-part-one-public%2fprivate-keys%2f" target="_blank" rel="noopener" aria-label="" title="Share on facebook">
+  <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?url=%2fposts%2f2024%2f06%2fssl%2ftls-guide-part-one-public%2fprivate-keys%2f" target="_blank" rel="noopener" aria-label="" title="Share on twitter">
+  <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small">
+      <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://www.tumblr.com/widgets/share/tool?posttype=link&amp;title=SSL%2fTLS%20Guide%20Part%20One%3a%20Public%2fPrivate%20Keys&amp;caption=SSL%2fTLS%20Guide%20Part%20One%3a%20Public%2fPrivate%20Keys&amp;canonicalUrl=%2fposts%2f2024%2f06%2fssl%2ftls-guide-part-one-public%2fprivate-keys%2f" target="_blank" rel="noopener" aria-label="" title="Share on tumblr">
+  <div class="resp-sharing-button resp-sharing-button--tumblr resp-sharing-button--small">
+    <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.563 24c-5.093 0-7.031-3.756-7.031-6.411V9.747H5.116V6.648c3.63-1.313 4.512-4.596 4.71-6.469C9.84.051 9.941 0 9.999 0h3.517v6.114h4.801v3.633h-4.82v7.47c.016 1.001.375 2.371 2.207 2.371h.09c.631-.02 1.486-.205 1.936-.419l1.156 3.425c-.436.636-2.4 1.374-4.156 1.404h-.178l.011.002z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="mailto:?subject=SSL%2fTLS%20Guide%20Part%20One%3a%20Public%2fPrivate%20Keys&amp;body=%2fposts%2f2024%2f06%2fssl%2ftls-guide-part-one-public%2fprivate-keys%2f" target="_self" rel="noopener" aria-label="" title="Share via email">
+  <div class="resp-sharing-button resp-sharing-button--email resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://pinterest.com/pin/create/button/?url=%2fposts%2f2024%2f06%2fssl%2ftls-guide-part-one-public%2fprivate-keys%2f&amp;media=%2fposts%2f2024%2f06%2fssl%2ftls-guide-part-one-public%2fprivate-keys%2f;description=SSL%2fTLS%20Guide%20Part%20One%3a%20Public%2fPrivate%20Keys" target="_blank" rel="noopener" aria-label="" title="Share on pinterest">
+  <div class="resp-sharing-button resp-sharing-button--pinterest resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fposts%2f2024%2f06%2fssl%2ftls-guide-part-one-public%2fprivate-keys%2f&amp;title=SSL%2fTLS%20Guide%20Part%20One%3a%20Public%2fPrivate%20Keys&amp;summary=SSL%2fTLS%20Guide%20Part%20One%3a%20Public%2fPrivate%20Keys&amp;source=%2fposts%2f2024%2f06%2fssl%2ftls-guide-part-one-public%2fprivate-keys%2f" target="_blank" rel="noopener" aria-label="" title="Share on linkedin">
+  <div class="resp-sharing-button resp-sharing-button--linkedin resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://reddit.com/submit/?url=%2fposts%2f2024%2f06%2fssl%2ftls-guide-part-one-public%2fprivate-keys%2f&amp;resubmit=true&amp;title=SSL%2fTLS%20Guide%20Part%20One%3a%20Public%2fPrivate%20Keys" target="_blank" rel="noopener" aria-label="" title="Share on reddit">
+  <div class="resp-sharing-button resp-sharing-button--reddit resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://www.xing.com/app/user?op=share;url=%2fposts%2f2024%2f06%2fssl%2ftls-guide-part-one-public%2fprivate-keys%2f;title=SSL%2fTLS%20Guide%20Part%20One%3a%20Public%2fPrivate%20Keys" target="_blank" rel="noopener" aria-label="" title="Share on xing">
+  <div class="resp-sharing-button resp-sharing-button--xing resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M18.188 0c-.517 0-.741.325-.927.66 0 0-7.455 13.224-7.702 13.657.015.024 4.919 9.023 4.919 9.023.17.308.436.66.967.66h3.454c.211 0 .375-.078.463-.22.089-.151.089-.346-.009-.536l-4.879-8.916c-.004-.006-.004-.016 0-.022L22.139.756c.095-.191.097-.387.006-.535C22.056.078 21.894 0 21.686 0h-3.498zM3.648 4.74c-.211 0-.385.074-.473.216-.09.149-.078.339.02.531l2.34 4.05c.004.01.004.016 0 .021L1.86 16.051c-.099.188-.093.381 0 .529.085.142.239.234.45.234h3.461c.518 0 .766-.348.945-.667l3.734-6.609-2.378-4.155c-.172-.315-.434-.659-.962-.659H3.648v.016z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="whatsapp://send?text=SSL%2fTLS%20Guide%20Part%20One%3a%20Public%2fPrivate%20Keys%20%2fposts%2f2024%2f06%2fssl%2ftls-guide-part-one-public%2fprivate-keys%2f" target="_blank" rel="noopener" aria-label="" title="Share on whatsapp">
+  <div class="resp-sharing-button resp-sharing-button--whatsapp resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://news.ycombinator.com/submitlink?u=%2fposts%2f2024%2f06%2fssl%2ftls-guide-part-one-public%2fprivate-keys%2f&amp;t=SSL%2fTLS%20Guide%20Part%20One%3a%20Public%2fPrivate%20Keys" target="_blank" rel="noopener" aria-label="" title="Share on hacker news">
+  <div class="resp-sharing-button resp-sharing-button--hackernews resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M0 24V0h24v24H0zM6.951 5.896l4.112 7.708v5.064h1.583v-4.972l4.148-7.799h-1.749l-2.457 4.875c-.372.745-.688 1.434-.688 1.434s-.297-.708-.651-1.434L8.831 5.896h-1.88z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://telegram.me/share/url?text=SSL%2fTLS%20Guide%20Part%20One%3a%20Public%2fPrivate%20Keys&amp;url=%2fposts%2f2024%2f06%2fssl%2ftls-guide-part-one-public%2fprivate-keys%2f" target="_blank" rel="noopener" aria-label="" title="Share on telegram">
+  <div class="resp-sharing-button resp-sharing-button--telegram resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+    </div>
+  </div>
+</a>
+
+      </div>
+
+    
+    <div class="pagination">
+        
+
+        <div class="pagination__buttons">
+            
+            <span class="button previous">
+                <a href="/posts/2024/06/ssl/tls-guide-part-two-certificates/">
+                    <span class="button__icon">←</span>
+                    <span class="button__text">SSL/TLS Guide Part Two: Certificates</span>
+                </a>
+            </span>
+            
+
+            
+        </div>
+    </div>
+
+
+    
+
+    
+
+  </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2024</span>
+            <span><a href="/">Alan Abbott</a></span>
+            <span><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></span>
+            <span><a href="/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+            
+        </div>
+    </div>
+    
+    
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+<script type="text/javascript" src="/bundle.min.eb5ed6ec33c624a3727454061fd88d9df5ad3f28a56d0f05eb8536d32d122b968f528d87df1b625f104ddd90617fe4adafdc6c9033eff5cd749cb35f2b806407.js" integrity="sha512-617W7DPGJKNydFQGH9iNnfWtPyilbQ8F64U20y0SK5aPUo2H3xtiXxBN3ZBhf&#43;Str9xskDPv9c10nLNfK4BkBw=="></script>
+
+
+
+    </body>
+</html>

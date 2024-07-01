@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>untagged on Alan Abbott</title>
+    <link>/tags/untagged/</link>
+    <description>Recent content in untagged on Alan Abbott</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Tue, 25 Jun 2024 18:28:45 -0500</lastBuildDate><atom:link href="/tags/untagged/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SSL/TLS Guide Part Three: Tools for Working with Certificates</title>
+      <link>/posts/2024/06/ssl/tls-guide-part-three-tools-for-working-with-certificates/</link>
+      <pubDate>Tue, 25 Jun 2024 18:28:45 -0500</pubDate>
+      
+      <guid>/posts/2024/06/ssl/tls-guide-part-three-tools-for-working-with-certificates/</guid>
+      <description>Windows and Java File Types
+Windows and Java platforms utilize different file formats to store and manage TLS certificates. Understanding these file types is essential for proper certificate handling, installation, and configuration in various applications and systems. The following are some common file formats used for TLS certificates on Windows and Java platforms:
+Personal Information Exchange (PFX) or PKCS#12: Windows systems often use the .pfx file format to store a certificate and its corresponding private key in a single, password-protected file.</description>
+    </item>
+    
+    <item>
+      <title>SSL/TLS Guide Part One: Public/Private Keys</title>
+      <link>/posts/2024/06/ssl/tls-guide-part-one-public/private-keys/</link>
+      <pubDate>Tue, 25 Jun 2024 18:26:20 -0500</pubDate>
+      
+      <guid>/posts/2024/06/ssl/tls-guide-part-one-public/private-keys/</guid>
+      <description>Transport Layer Security (TLS) or Secure Sockets Layer (SSL) protocols are the primary method for securing communications between servers and clients on the internet or other networks such as a plant floor or enterprise network. TLS is the successor to SSL, however the terms are used interchangeably, both referring to the newer TLS protocol. Without using TLS to encrypt the communication between servers and clients, their communications could be exposed to 3rd parties intercepting and possibly spoofing messages.</description>
+    </item>
+    
+    <item>
+      <title>SSL/TLS Guide Part One: Certificates</title>
+      <link>/posts/2024/06/ssl/tls-guide-part-one-certificates/</link>
+      <pubDate>Tue, 25 Jun 2024 18:26:14 -0500</pubDate>
+      
+      <guid>/posts/2024/06/ssl/tls-guide-part-one-certificates/</guid>
+      <description>Certificates This is where our public keys become certificates. Certificates are how clients verify servers are who they claim to be. Certificates provide this verification by including a signed message from a trusted company, known as a Certificate Authority (CA), who verifies the domain name and company information listed on the certificate is correct and true.
+A certificate is obtained from a Certificate Authority by first creating a keypair, then sending the public key along with all the information associated with the owner of the public key.</description>
+    </item>
+    
+  </channel>
+</rss>
