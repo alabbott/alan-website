@@ -197,3 +197,7 @@ disableHugoGeneratorInject = false
     identifier = "posts"
     name       = "Posts"
     url        = "posts/"
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe=true
