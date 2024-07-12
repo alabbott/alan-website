@@ -1,7 +1,7 @@
 ---
 title: "Homelab Tour"
 date: 2024-07-01T11:29:43-05:00
-draft: false
+draft: true
 toc: false
 images:
 
